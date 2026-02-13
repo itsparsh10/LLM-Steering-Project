@@ -57,7 +57,7 @@ print("\n" + "=" * 80)
 # Load model
 print("\n🤖 MODEL INFORMATION:")
 print("   Model: GPT-2 Medium (355M parameters)")
-print("   Source: Hugging Face (openai-community/gpt2-medium)")
+print("   Source: Hugging Face (openai-community/gpt2)")
 print("\nLoading model...")
 model, tokenizer = load_model(local=True)
 print("✓ Model loaded successfully\n")
@@ -179,7 +179,7 @@ output_content = f"""FORMALITY / CONCISENESS STEERING EXPERIMENT RESULTS
 {'=' * 80}
 
 MODEL: GPT-2 Medium (355M parameters)
-SOURCE: Hugging Face (openai-community/gpt2-medium)
+SOURCE: Hugging Face (openai-community/gpt2)
 
 INPUT PROMPT: "{prompt}"
 

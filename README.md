@@ -2,7 +2,7 @@
 
 <div align="center">
 
-**Activation Steering for Language Models using GPT-2 Medium**
+**Activation Steering for Language Models using GPT-2**
 
 [![Python](https://img.shields.io/badge/Python-3.9+-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.10.0-orange.svg)](https://pytorch.org/)
@@ -34,7 +34,7 @@
 
 ## 🎯 Overview
 
-This project implements **activation steering** techniques for language models, allowing you to control model behavior by injecting steering vectors into hidden states. We use **GPT-2 Medium** (355M parameters) to demonstrate steering across different dimensions:
+This project implements **activation steering** techniques for language models, allowing you to control model behavior by injecting steering vectors into hidden states. We use **GPT-2** (124M parameters, small) to demonstrate steering across different dimensions:
 
 - 🎭 **Emotion Steering** - Shift output towards positive/optimistic tone
 - 👤 **Persona Steering** - Control writing style (formal vs casual)
@@ -58,9 +58,9 @@ This project implements **activation steering** techniques for language models, 
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    GPT-2 Medium Model                       │
-│                  (355M Parameters)                         │
-│              Hugging Face: gpt2-medium                      │
+│                    GPT-2 Model (Small)                     │
+│                  (124M Parameters)                         │
+│              Hugging Face: gpt2                             │
 └──────────────────────┬──────────────────────────────────────┘
                        │
                        ▼
@@ -150,7 +150,7 @@ python3 test_steering_simple.py
 
 **What happens:**
 - ✅ Checks and installs dependencies if needed
-- ✅ Downloads GPT-2 Medium model if needed (~500MB, first run only)
+- ✅ Downloads GPT-2 model if needed (~500MB, first run only)
 - ✅ Runs emotion steering test
 - ✅ Saves results to `results/local_tests/simple_test_result.txt`
 
@@ -174,7 +174,7 @@ venv\Scripts\activate     # On Windows
 pip install -r requirements.txt
 ```
 
-#### Step 3: Load/Install GPT-2 Medium Model
+#### Step 3: Load/Install GPT-2 Model
 
 ```bash
 python3 ai_model.py
@@ -182,7 +182,7 @@ python3 ai_model.py
 
 This will:
 - ✅ Verify dependencies
-- ✅ Download GPT-2 Medium model from Hugging Face (~500MB)
+- ✅ Download GPT-2 model from Hugging Face (~500MB)
 - ✅ Verify model loading
 - ⏱️ Takes 5-10 minutes on first run
 
@@ -302,7 +302,7 @@ Each result file contains:
 EXPERIMENT RESULTS
 ================================================================================
 
-MODEL: GPT-2 Medium (355M parameters)
+MODEL: GPT-2 (124M parameters)
 INPUT PROMPT: "..."
 
 1️⃣  BASELINE OUTPUT (without steering):
@@ -333,14 +333,14 @@ cat results/local_tests/emotion_test.txt
 
 ## 🤖 Model Information
 
-### GPT-2 Medium
+### GPT-2 (Small)
 
 | Property | Value |
 |----------|-------|
-| **Model Name** | GPT-2 Medium |
-| **Model ID** | `gpt2-medium` |
-| **Parameters** | 355M (0.355B) |
-| **Source** | Hugging Face (`openai-community/gpt2-medium`) |
+| **Model Name** | GPT-2 |
+| **Model ID** | `gpt2` |
+| **Parameters** | 124M |
+| **Source** | Hugging Face (`openai-community/gpt2`) |
 | **License** | Modified MIT License |
 | **Size** | ~500MB (downloads automatically) |
 | **Language** | English |
@@ -351,7 +351,7 @@ cat results/local_tests/emotion_test.txt
 ### Model Card
 
 - **Research Paper**: [Language Models are Unsupervised Multitask Learners](https://arxiv.org/abs/1910.09700)
-- **Hugging Face**: [gpt2-medium](https://huggingface.co/openai-community/gpt2-medium)
+- **Hugging Face**: [gpt2](https://huggingface.co/openai-community/gpt2)
 - **OpenAI Blog**: [GPT-2 Blog Post](https://openai.com/research/better-language-models)
 
 ---
@@ -362,7 +362,7 @@ cat results/local_tests/emotion_test.txt
 LLM-Steering-Project/
 │
 ├── 📂 core/                                    # Core modules
-│   ├── model_loader.py                        # Load GPT-2 Medium model
+│   ├── model_loader.py                        # Load GPT-2 model
 │   ├── hidden_states.py                       # Extract hidden states from model
 │   ├── steering.py                            # Compute and apply steering vectors
 │   └── auto_setup.py                          # Auto-setup helper
@@ -444,7 +444,7 @@ python3 -m pip install -r requirements.txt --user
 
 ### Issue: Out of Memory
 
-**Solution**: GPT-2 Medium uses ~1.5GB RAM. Close other applications if needed.
+**Solution**: GPT-2 uses ~1GB RAM. Close other applications if needed.
 
 ### Issue: Import Errors
 
@@ -470,7 +470,7 @@ python3 test_steering_simple.py
 
 ### System Requirements
 
-- **RAM**: ~2GB minimum (model uses ~1.5GB)
+- **RAM**: ~2GB minimum (model uses ~1GB)
 - **Disk**: ~1GB for model cache
 - **CPU**: Any modern CPU (GPU optional, not required)
 
@@ -479,7 +479,7 @@ python3 test_steering_simple.py
 ## 🧩 Core Components
 
 ### `core/model_loader.py`
-Loads GPT-2 Medium model from Hugging Face with proper device handling.
+Loads GPT-2 model from Hugging Face with proper device handling.
 
 ### `core/hidden_states.py`
 Extracts hidden states from model layers for steering vector computation.
@@ -511,7 +511,7 @@ Language models encode semantic information in their hidden states. By shifting 
 ## 📚 References
 
 - **Research Paper**: [Language Models are Unsupervised Multitask Learners](https://arxiv.org/abs/1910.09700)
-- **Hugging Face Model**: [GPT-2 Medium](https://huggingface.co/openai-community/gpt2-medium)
+- **Hugging Face Model**: [GPT-2](https://huggingface.co/openai-community/gpt2)
 - **OpenAI Blog**: [Better Language Models](https://openai.com/research/better-language-models)
 
 ---
@@ -524,7 +524,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📄 License
 
-This project uses GPT-2 Medium model which is licensed under **Modified MIT License**.
+This project uses GPT-2 model which is licensed under **Modified MIT License**.
 
 ---
 

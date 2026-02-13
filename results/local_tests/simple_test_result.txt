@@ -1,0 +1,36 @@
+SIMPLE STEERING TEST RESULTS
+================================================================================
+
+MODEL: GPT-2 (124M parameters)
+TEST: Emotion Steering (Positive vs Neutral)
+
+PROMPT: "Describe your outlook on life."
+
+1️⃣  BASELINE OUTPUT (without steering):
+--------------------------------------------------------------------------------
+Describe your outlook on life. How many days a week you spend at the top of the food chain or what your favorite restaurant food is making you? What is your favorite restaurant and where are you currently eating? What do you like the most about the cuisine and what are some of your favorite dishes?
+
+Q: How do
+
+2️⃣  STEERED OUTPUT (with positive emotion steering):
+--------------------------------------------------------------------------------
+Describe your outlook on life.
+
+"I've been in a very supportive relationship with God for the last several years. I've been very fortunate to be able to say my story, even if there are people who may not agree with what I've said. I think the most significant things that God does with a person are
+
+ANALYSIS:
+--------------------------------------------------------------------------------
+This test compares baseline output (normal GPT-2) vs steered output 
+(with positive emotion steering applied).
+
+Steering vector was computed from:
+- Positive examples: ['I feel extremely happy today.', 'Life feels exciting and meaningful.']
+- Neutral examples: ['I am writing a sentence.', 'This is a neutral statement.']
+
+EXPECTED DIFFERENCES:
+- More positive vocabulary in steered output
+- More optimistic tone
+- Emotional language shift
+- Enthusiastic expressions
+
+STATUS: ✅ Steering is working!

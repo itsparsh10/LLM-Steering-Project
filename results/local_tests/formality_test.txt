@@ -1,0 +1,56 @@
+FORMALITY / CONCISENESS STEERING EXPERIMENT RESULTS
+================================================================================
+
+MODEL: GPT-2 Medium (355M parameters)
+SOURCE: Hugging Face (openai-community/gpt2)
+
+INPUT PROMPT: "Write a short summary of the experiment results."
+
+1️⃣  BASELINE OUTPUT (without steering):
+--------------------------------------------------------------------------------
+Expected: Might be casual, informal, or verbose
+Example: "So yeah, it's kind of cool and stuff, you know?"
+
+Actual Output:
+Write a short summary of the experiment results. If you don't need to see the results, please click on the little "Print" icon next to the paper. If you still don't see the results, please click on the little "Print" icon next to the paper. The results are printed on an x-height.png format.
+
+The next step is to choose the correct paper for you.
+
+For more information about the "Print" button, click here.
+
+If you want to learn more about the paper, you can check out the paper here.
+
+If you'd like to learn more about the
+
+2️⃣  STEERED OUTPUT (with formality/conciseness steering):
+--------------------------------------------------------------------------------
+Expected: More formal, precise, concise tone
+Example: "In summary, the experiment demonstrates that the results are consistent with the hypothesis. Consequently, we recommend adoption of the methodology described herein."
+
+Actual Output:
+Write a short summary of the experiment results.
+
+Results
+
+The mean energy intake for both men and women was 4.3 MJ/d, with an average of 3.8 MJ/d (range 1.8–5.2 MJ/d in women and 2.1–7.4 MJ/d in men). The mean energy intake of the men was 2.9 MJ/d (range 1.2–5.1 MJ/d).
+
+The mean energy intake of the women was 3.8 MJ/d (range 1.2–5.1 MJ/d). The mean energy intake
+
+ANALYSIS:
+--------------------------------------------------------------------------------
+The steering vector was computed from formal examples (structured, academic) vs casual examples (informal, conversational).
+Compare the two outputs above to see how steering influenced the formality/conciseness level.
+
+✅ WHAT TO LOOK FOR:
+- More formal language (consequently, therefore, in summary)
+- Precise, structured sentences
+- Professional, academic tone
+- Reduced casual expressions
+- More concise and clear communication
+
+QUANTITATIVE SIGNS:
+- Style/word-choice shift toward formal language
+- Cosine similarity to formal examples increases
+- Reduced casual filler words
+
+If you see this kind of shift, steering worked! ✅

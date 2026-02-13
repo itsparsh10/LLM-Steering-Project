@@ -2,7 +2,7 @@
 SIMPLE STEERING TEST - Easy to Test and Verify
 
 This is a simplified test file that:
-1. Tests GPT-2 Medium model loading
+1. Tests GPT-2 (small) model loading
 2. Tests emotion steering
 3. Generates baseline vs steered output
 4. Saves results to a file
@@ -19,7 +19,7 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 print("=" * 80)
-print("🧪 SIMPLE STEERING TEST - GPT-2 MEDIUM")
+print("🧪 SIMPLE STEERING TEST - GPT-2 (SMALL)")
 print("=" * 80)
 
 # Step 1: Quick dependency check
@@ -35,9 +35,8 @@ except ImportError as e:
     sys.exit(1)
 
 # Step 2: Load model
-print("\n2️⃣  Loading GPT-2 Medium model...")
-print("   (Will download ~500MB on first run - takes 5-10 minutes)")
-print("   (Subsequent runs are much faster!)")
+print("\n2️⃣  Loading GPT-2 model (small, ~500MB)...")
+print("   (First run downloads once; subsequent runs use cache)")
 
 try:
     from core.model_loader import load_model
@@ -169,7 +168,7 @@ os.makedirs("results/local_tests", exist_ok=True)
 result_content = f"""SIMPLE STEERING TEST RESULTS
 {'=' * 80}
 
-MODEL: GPT-2 Medium (355M parameters)
+MODEL: GPT-2 (124M parameters)
 TEST: Emotion Steering (Positive vs Neutral)
 
 PROMPT: "{prompt}"
@@ -184,7 +183,7 @@ PROMPT: "{prompt}"
 
 ANALYSIS:
 {'-' * 80}
-This test compares baseline output (normal GPT-2 Medium) vs steered output 
+This test compares baseline output (normal GPT-2) vs steered output 
 (with positive emotion steering applied).
 
 Steering vector was computed from:

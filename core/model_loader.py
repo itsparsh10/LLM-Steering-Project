@@ -4,10 +4,10 @@ import os
 
 def load_model(local=True, verbose=True):
     """
-    Load GPT-2 Medium (local) or Phi-3 (Colab) model.
+    Load GPT-2 small (local) or Phi-3 (Colab) model.
     
     Args:
-        local: If True, load GPT-2 Medium. If False, load Phi-3.
+        local: If True, load GPT-2 small. If False, load Phi-3.
         verbose: If True, print loading progress.
     
     Returns:
@@ -20,9 +20,9 @@ def load_model(local=True, verbose=True):
         print(f"   Device: {device}")
     
     if local:
-        model_id = "gpt2-medium"
+        model_id = "gpt2"  # Small model: ~124M params, ~500MB (faster download than gpt2-medium)
         if verbose:
-            print(f"   Loading GPT-2 Medium model from Hugging Face...")
+            print(f"   Loading GPT-2 model from Hugging Face...")
             print(f"   Model ID: {model_id}")
             print(f"   (This will download ~500MB on first run)")
         

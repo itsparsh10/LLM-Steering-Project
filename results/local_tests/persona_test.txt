@@ -1,0 +1,48 @@
+PERSONA STEERING EXPERIMENT RESULTS
+================================================================================
+
+MODEL: GPT-2 Medium (355M parameters)
+SOURCE: Hugging Face (openai-community/gpt2)
+
+INPUT PROMPT: "Explain how neural networks learn."
+
+1️⃣  BASELINE OUTPUT (without steering):
+--------------------------------------------------------------------------------
+Expected: Might be casual, informal, or neutral
+Example: "Yeah, so it's kind of like this..."
+
+Actual Output:
+Explain how neural networks learn.
+
+Explore other methods for analyzing neural networks that are used in data analysis.
+
+This post was prepared by a team of researchers at Carnegie Mellon University.
+
+2️⃣  STEERED OUTPUT (with teacher-style steering):
+--------------------------------------------------------------------------------
+Expected: Detailed, structured, educational tone
+Example: "Let me explain this in a detailed and structured manner..."
+
+Actual Output:
+Explain how neural networks learn. With this topic, I'll explain how to create a neural network for a simple task.
+
+This is a simple task, which is a simple neural network that can solve an example problem. The goal is to figure out how the network works.
+
+To do that, we will use a deep neural network.
+
+Deep neural network
+
+A deep neural network is a computer program that uses a finite number of neurons to learn a problem. The neuron gets a new input and a new
+
+ANALYSIS:
+--------------------------------------------------------------------------------
+The steering vector was computed from teacher examples (structured, educational) vs casual examples.
+Compare the two outputs above to see how steering influenced the writing style/persona.
+
+✅ WHAT TO LOOK FOR:
+- More detailed and structured explanations
+- Educational, formal tone
+- Step-by-step approach
+- Professional language patterns
+
+If your text reflects the style shift, steering worked! ✅

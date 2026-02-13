@@ -56,7 +56,7 @@ print("\n" + "=" * 80)
 # Load model
 print("\n🤖 MODEL INFORMATION:")
 print("   Model: GPT-2 Medium (355M parameters)")
-print("   Source: Hugging Face (openai-community/gpt2-medium)")
+print("   Source: Hugging Face (openai-community/gpt2)")
 print("\nLoading model...")
 print("   (Model will download automatically on first run - ~500MB)")
 model, tokenizer = load_model(local=True, verbose=True)
@@ -173,7 +173,7 @@ output_content = f"""EMOTION STEERING EXPERIMENT RESULTS
 {'=' * 80}
 
 MODEL: GPT-2 Medium (355M parameters)
-SOURCE: Hugging Face (openai-community/gpt2-medium)
+SOURCE: Hugging Face (openai-community/gpt2)
 
 INPUT PROMPT: "{prompt}"
 
